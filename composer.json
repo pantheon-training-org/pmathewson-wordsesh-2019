@@ -67,6 +67,9 @@
     "psr-4": { "PantheonSystems\\WordHatHelpers\\": "tests/behat/helper_classes/" }
   },
   "scripts": {
+    "install-woocommerce": "bin/install-woocommerce.sh 3.7.0",
+    "pre-install-cmd": "@install-woocommerce",
+    "pre-update-cmd": "@install-woocommerce",
     "build-assets": [
       "@prepare-for-pantheon",
       "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
